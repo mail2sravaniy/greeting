@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  service2:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: service2-greeting
+    ports:
+      - "8082:8082"
+    networks:
+      - microservice-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  microservice-network:
+    driver: bridge
