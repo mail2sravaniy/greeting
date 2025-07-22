@@ -13,7 +13,7 @@
 	<artifactId>greeting</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>greeting</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Simple greeting service that returns Hello message</description>
 	<url />
 	<licenses>
 		<license />
